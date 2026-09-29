@@ -9,7 +9,7 @@ const STEP_TAGS = ['soru-cevap', 'gezi-planlama', null];
 
 /**
  * Ana sayfa kahramanı. Mockup'taki düzen: solda başlık, sağda arama ve
- * "Bir Tartışma Başlat", altında numaralı üç yol kartı, sağ kenarda dikey yazı.
+ * "Bir Tartışma Başlat", altında numaralı üç yol kartı. Dikey yazı çerçevenin sol çizgisinde.
  */
 export default class JfHero extends Component {
   oninit(vnode) {
@@ -57,9 +57,6 @@ export default class JfHero extends Component {
             </button>
           </div>
 
-          <p className="JfHero-vtext" aria-hidden="true">
-            {t('hero.vertical')}
-          </p>
         </div>
 
         <nav className="container JfSteps" aria-label={t('hero.steps_label')}>

@@ -173,7 +173,7 @@ a { color: @jf-red; }
 .Hero.JfHero {
   position: relative;
   z-index: 1;
-  padding: 34px 0 0;
+  padding: 22px 0 0;
   margin: 0;
   background: none;
   color: @jf-ink;
@@ -194,15 +194,15 @@ a { color: @jf-red; }
   column-gap: 60px;
   gap: 40px;
   align-items: end;
-  padding: 0 20px 20px;
+  padding: 0 20px 14px;
 }
 
 .JfHero-kicker {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0 0 14px;
-  font: 700 11.5px/1 @jf-sans;
+  margin: 0 0 10px;
+  font: 700 11px/1 @jf-sans;
   letter-spacing: .22em;
   text-transform: uppercase;
   color: @jf-red;
@@ -213,7 +213,7 @@ a { color: @jf-red; }
 
 .Hero.JfHero .JfHero-title {
   margin: 0;
-  font: 700 clamp(34px, 3vw, 50px)/1.05 @jf-serif;
+  font: 700 clamp(30px, 2.3vw, 40px)/1.06 @jf-serif;
   letter-spacing: -.03em;
   color: @jf-ink;
 }
@@ -222,11 +222,11 @@ a { color: @jf-red; }
   .JfHero-title { white-space: nowrap; }
 }
 
-.JfHero-rule { display: block; width: 46px; height: 3px; margin: 12px 0 10px 2px; background: @jf-red; }
+.JfHero-rule { display: block; width: 40px; height: 3px; margin: 10px 0 8px 2px; background: @jf-red; }
 
 .JfHero-lead {
   margin: 0;
-  font: 400 18px/1.45 @jf-serif;
+  font: 400 16.5px/1.45 @jf-serif;
   color: #56606a;
 }
 
@@ -234,8 +234,8 @@ a { color: @jf-red; }
 
 .JfHero-label {
   display: block;
-  margin: 0 0 12px;
-  font: 700 11px/1 @jf-sans;
+  margin: 0 0 9px;
+  font: 700 10.5px/1 @jf-sans;
   letter-spacing: .2em;
   text-transform: uppercase;
   color: #9c4644;
@@ -255,8 +255,8 @@ a { color: @jf-red; }
   }
 
   .FormControl {
-    height: 46px;
-    padding-left: 46px;
+    height: 40px;
+    padding-left: 44px;
     font-size: 15px;
     background: #fff;
     border: 1px solid @jf-line;
@@ -269,28 +269,15 @@ a { color: @jf-red; }
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 48px;
-  padding: 0 20px;
-  font-size: 15px;
+  height: 42px;
+  padding: 0 18px;
+  font-size: 14.5px;
   box-shadow: 0 3px 0 @jf-red-dark;
 
   .JfArrow { font-size: 22px; line-height: 1; transition: transform .2s; }
   &:hover .JfArrow { transform: translateX(4px); }
 }
 
-.JfHero-vtext {
-  position: absolute;
-  right: -58px;
-  top: -20px;
-  margin: 0;
-  writing-mode: vertical-rl;
-  font: 600 10.5px/1 @jf-serif;
-  letter-spacing: .5em;
-  text-transform: uppercase;
-  color: #3c4650;
-
-  &::before { content: ''; display: inline-block; height: 26px; width: 1px; margin-bottom: 14px; background: @jf-red; }
-}
 
 // Üç yol kartı
 .JfSteps {
@@ -304,8 +291,8 @@ a { color: @jf-red; }
 .JfStep {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  padding: 12px 22px 14px;
+  gap: 16px;
+  padding: 9px 20px 10px;
   text-align: left;
   color: @jf-ink !important;
   text-decoration: none !important;
@@ -320,26 +307,26 @@ a { color: @jf-red; }
   &:hover .JfArrow { transform: translateX(4px); color: @jf-red; }
 }
 
-.JfStep-n { font: 400 28px/1 @jf-serif; color: @jf-red; }
+.JfStep-n { font: 400 23px/1 @jf-serif; color: @jf-red; }
 
 .JfStep-t {
   flex: 1;
   min-width: 0;
-  padding-top: 6px;
+  padding-top: 4px;
 
-  strong { display: block; margin-bottom: 4px; font: 700 18px/1.25 @jf-serif; }
-  span { display: block; font-size: 13px; line-height: 1.45; color: @jf-mute; }
+  strong { display: block; margin-bottom: 2px; font: 700 16px/1.25 @jf-serif; }
+  span { display: block; font-size: 12.5px; line-height: 1.4; color: @jf-mute; }
 }
 
-.JfStep .JfArrow { align-self: center; font-size: 22px; color: @jf-ink; transition: transform .2s, color .2s; }
+.JfStep .JfArrow { align-self: center; font-size: 19px; color: @jf-ink; transition: transform .2s, color .2s; }
 
 // Dalga ayracı (japonya.jp'deki bölüm ayracı)
 .JfIndex .sideNavContainer {
   position: relative;
   z-index: 1;
   max-width: 1190px;
-  margin-top: 20px;
-  padding-top: 38px;
+  margin-top: 14px;
+  padding-top: 32px;
 
   &::before {
     content: '';
@@ -629,30 +616,35 @@ a { color: @jf-red; }
 
 .JfArt { position: absolute; display: block; height: auto; }
 
-// Soluk suluboya harita: sağ kenarda, kenarları söner.
+// Sağda büyük ve soluk suluboya harita: bütün sitenin arkasında sabit fon, kenarları söner.
 .JfArt--map {
-  top: 150px;
-  right: ~"max(-60px, calc(50% - 940px))";
-  width: 440px;
-  opacity: .42;
-  -webkit-mask-image: radial-gradient(ellipse 62% 62% at 55% 48%, #000 55%, transparent 82%);
-  mask-image: radial-gradient(ellipse 62% 62% at 55% 48%, #000 55%, transparent 82%);
+  top: 52%;
+  right: -70px;
+  height: 86vh;
+  width: auto;
+  max-width: none;
+  transform: translateY(-50%);
+  opacity: .28;
+  -webkit-mask-image: radial-gradient(ellipse 64% 64% at 55% 50%, #000 58%, transparent 84%);
+  mask-image: radial-gradient(ellipse 64% 64% at 55% 50%, #000 58%, transparent 84%);
 }
-.JfArt--compass { top: 128px; left: 66px; width: 52px; opacity: .8; }
-.JfArt--boat { top: 64%; right: 70px; width: 64px; opacity: .6; }
-// Sakura, Fuji ve çam kenar boşluğuna sığacak kadar büyür.
-.JfArt--sakura { left: 0; bottom: 20px; width: ~"min(340px, calc(50vw - 610px))"; }
-.JfArt--fuji { right: ~"min(110px, calc(50vw - 830px))"; bottom: 270px; width: ~"min(290px, calc(50vw - 640px))"; filter: saturate(1.35) contrast(1.12); }
-.JfArt--pine { right: 0; bottom: 0; width: ~"min(350px, calc(50vw - 590px))"; }
+
+// Sayfayla kayan süslemeler (çerçevenin içinde): sol üstte pusula, içeriğin en altında
+// solda sakura, sağda Fuji, çam ve torii. Boyutlar kenar boşluğuna göre.
+.JfFrame .JfArt { z-index: 0; }
+.JfArt--compass { top: 56px; left: 58px; width: 46px; opacity: .8; }
+.JfArt--sakura { left: 0; bottom: 18px; width: ~"min(340px, calc(50vw - 610px))"; }
+.JfArt--fuji { right: ~"min(110px, calc(50vw - 830px))"; bottom: 250px; width: ~"min(280px, calc(50vw - 640px))"; filter: saturate(1.35) contrast(1.12); }
+.JfArt--pine { right: 0; bottom: 18px; width: ~"min(340px, calc(50vw - 590px))"; }
 
 @media (max-width: 1699px) {
-  .JfArt--compass, .JfArt--boat { display: none; }
-  .JfArt--fuji { right: 20px; bottom: 200px; }
+  .JfArt--compass { display: none; }
+  .JfArt--fuji { right: 20px; bottom: 190px; }
 }
 
 @media (max-width: 1599px) {
   .JfArt--sakura, .JfArt--pine, .JfArt--fuji { display: none; }
-  .JfArt--map { width: 340px; right: -90px; opacity: .35; }
+  .JfArt--map { opacity: .26; }
 }
 
 // Kenar boşluğu dar ekranlarda süslemeler metnin arkasına düşer: gizle.
@@ -801,7 +793,6 @@ a { color: @jf-red; }
 
   .Hero.JfHero .JfHero-title { font-size: 40px; }
   .JfHero-lead { font-size: 18px; }
-  .JfHero-vtext { display: none; }
 
   .JfSteps { grid-template-columns: 1fr; }
   .JfStep { border-left: 0; border-top: 1px solid @jf-line; padding: 16px; gap: 16px; }
@@ -824,9 +815,4 @@ a { color: @jf-red; }
   .UserPage .DiscussionListItem-info > li.item-tags { position: static !important; transform: none; order: 5; margin-left: 4px; }
   .DiscussionList { padding: 0 2px; }
   .DiscussionListItem-info { flex-wrap: wrap; row-gap: 4px; }
-}
-
-// Sağdaki dikey yazı ancak kahramanla sağ çizgi arasında yer varsa.
-@media (max-width: 1500px) {
-  .JfHero-vtext { display: none; }
 }

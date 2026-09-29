@@ -9,7 +9,7 @@ suluboya sakura, Fuji ve çam süslemeleri.
 - **Üst menü:** Tartışmalar, Etiketler, Sıralamalar (fof/gamification), Takip Ediliyor
   (giriş yapmış üyeler, flarum/subscriptions). Ana siteye dönüş üstteki yeşil barda.
   Arama ikona dönüşür, tıklayınca açılır; oturum menüsünde yalnız avatar.
-- **Ana sayfa kahramanı:** "交流 · Japonya.jp Forum", "Japonya, konuştukça yakın",
+- **Ana sayfa kahramanı (alçak):** "交流 · Japonya.jp Forum", "Japonya, konuştukça yakın",
   sağda arama kutusu ve "Bir Tartışma Başlat"; altında üç yol kartı
   (Sorunu sor → Soru-Cevap, Rotanı paylaş → Gezi Planlama, Deneyimini anlat → yeni tartışma).
 - **Kenar menüsü:** "Forumu keşfet" ve "Konular" başlıkları, etiketler renkli noktayla.
@@ -17,10 +17,12 @@ suluboya sakura, Fuji ve çam süslemeleri.
   yanıt sayısı, sağda etiket ve ok.
 - **Çerçeve (bütün sayfalar):** içerik alanının çevresinde anasitedeki gibi ince kırmızı çizgiler;
   köşelerde kesişir, sol çizgide dikey "日本へ、もっと近く" yazısı (1180 px altında gizli).
-- **Arka plan (bütün sayfalar):** ekrana sabit, içeriğin arkasında süslemeler: soluk suluboya
-  Japonya haritası (japonya.jp kapağındaki, yalnız görsel), pusula, kayık, seigaiha dalgaları,
-  sol altta sakura, sağ altta Fuji, çam ve torii. Kenar boşluğuna göre kademeli: 1700 px üstü
-  hepsi, 1600 px altı yalnız harita ve dalgalar, 1320 px altı hiçbiri.
+- **Arka plan (bütün sayfalar):** sağda büyük ve soluk suluboya Japonya haritası (japonya.jp
+  kapağındaki, yalnız görsel) ve seigaiha dalgaları; ekrana sabit, içeriğin arkasında
+  (1320 px altında gizli).
+- **Sayfayla kayan süslemeler:** çerçevenin sol üst köşesinde pusula; içeriğin en altında solda
+  sakura, sağda Fuji, çam ve torii. Kenar boşluğuna göre kademeli: 1700 px altında pusula,
+  1600 px altında sakura, Fuji ve çam gizlenir.
 - **Diğer sayfalar:** tartışma sayfası serif başlık ve okunaklı gövde, etiket sayfası kâğıt
   zemin ve etiket renginde şerit, Etiketler sayfası kartpostal kartlar.
 - Paneldeki ana renk ne olursa olsun forum japonya.jp paletini (kırmızı #c1272d, kâğıt #f7f6f0) kullanır.
