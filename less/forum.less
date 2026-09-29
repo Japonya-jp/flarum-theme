@@ -138,7 +138,7 @@ a { color: @jf-red; }
 @media (min-width: 1100px) {
   .App-header .container,
   .JfHero .container,
-  .JfSteps.container { width: auto; max-width: 1450px; }
+  .JfSteps.container { width: auto; max-width: ~"min(1450px, calc(100% - 160px))"; }
   .JfIndex .sideNavContainer { width: auto; max-width: 1190px; }
 }
 
@@ -181,7 +181,6 @@ a { color: @jf-red; }
   border: 0;
 }
 
-.JfHero .container { max-width: 1450px; }
 
 // Flarum'un .container temizleme öğeleri ızgarada boş hücre açmasın.
 .JfHero-in, .JfSteps {
@@ -297,7 +296,6 @@ a { color: @jf-red; }
 .JfSteps {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 1450px;
   border-top: 1px solid @jf-line;
   border-bottom: 1px solid @jf-line;
   padding: 0;
@@ -653,7 +651,12 @@ a { color: @jf-red; }
 
 // Dar ekranda kenar çizgileri metnin üstüne düşer.
 @media (max-width: 1180px) {
-  .JfFrame, .JfHero-vtext { display: none; }
+  .JfFrame { display: none; }
+}
+
+// Dikey yazı ancak kahramanla sağ çizgi arasında yer varsa.
+@media (max-width: 1500px) {
+  .JfHero-vtext { display: none; }
 }
 
 @media (max-width: 767px) {
