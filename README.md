@@ -65,6 +65,21 @@ php flarum assets:publish
 php flarum cache:clear
 ```
 
+Hostinger'da komut satırı PHP'sinde `proc_open` kapalıysa composer'ı şöyle çalıştır:
+`php -d disable_functions= $(which composer) update japonya/flarum-theme`
+
+**Önemli:** `update` çıktısında "is not locked" ve "Removing japonya/flarum-theme" görürsen
+tema `composer.json` kaydından düşmüş demektir; composer da onu siler ve forum eski görünümüne
+döner. Kaydı geri getirmek için `update` yerine bir kez `require` çalıştır:
+
+```bash
+composer require japonya/flarum-theme:dev-main
+php flarum assets:publish
+php flarum cache:clear
+```
+
+Kaydı kontrol etmek için: `grep flarum-theme composer.json`
+
 Hostinger'da LiteSpeed/CDN önbelleği varsa ardından onu da temizle.
 
 ## Kaldırma
