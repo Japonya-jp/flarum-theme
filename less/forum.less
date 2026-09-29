@@ -627,6 +627,9 @@ a { color: @jf-red; }
 
 .JfBg { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
 
+// İçerik kutusunun (en çok 1450px) iki yanındaki boşluğun genişliği; yan süslemeler buna sığar.
+@jf-gutter: ~"((100vw - min(1450px, 100vw - 160px)) / 2)";
+
 .JfWave {
   position: absolute;
   width: 240px;
@@ -636,42 +639,66 @@ a { color: @jf-red; }
 }
 // Dalga kümeleri yalnız kenar boşluklarında; metnin arkasına düşmesinler.
 .JfWave--1 { right: -70px; top: 30%; }
-.JfWave--2 { right: -20px; top: 52%; width: 170px; height: 85px; }
+.JfWave--2 { right: 40px; top: 58%; width: 150px; height: 75px; opacity: .6; }
 .JfWave--3 { left: -60px; top: 14%; width: 210px; height: 105px; opacity: .6; }
 .JfWave--4 { right: 120px; top: 12%; width: 150px; height: 75px; opacity: .6; }
+.JfWave--5 { left: 60px; top: 40%; width: 170px; height: 85px; opacity: .7; }
+.JfWave--6 { left: -40px; top: 60%; width: 150px; height: 75px; opacity: .5; }
+
+// Anasitedeki bulut kıvrımları
+.JfCloud {
+  position: absolute;
+  width: 128px;
+  height: auto;
+  fill: none;
+  stroke: #cdd4c3;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+}
+.JfCloud--1 { left: 70px; top: 25%; }
+.JfCloud--2 { right: 60px; top: 21%; width: 110px; transform: scaleX(-1); }
+.JfCloud--3 { right: 90px; top: 46%; width: 96px; }
 
 .JfArt { position: absolute; display: block; height: auto; }
 
-// Solda büyük ve soluk suluboya harita, dikeyde ortalı: bütün sitenin arkasında sabit fon,
-// kenarları söner. Sağda çam ve Fuji ile denge kurar.
+// Ortada büyük ve soluk suluboya harita: bütün sitenin arkasında sabit fon, kenarları söner.
 .JfArt--map {
-  top: 52%;
-  left: -90px;
-  height: 86vh;
+  top: 50%;
+  left: 50%;
+  height: 88vh;
   width: auto;
   max-width: none;
-  transform: translateY(-50%);
-  opacity: .28;
+  transform: translate(-50%, -50%);
+  opacity: .24;
   -webkit-mask-image: radial-gradient(ellipse 64% 64% at 55% 50%, #000 58%, transparent 84%);
   mask-image: radial-gradient(ellipse 64% 64% at 55% 50%, #000 58%, transparent 84%);
 }
 
-// Sayfayla kayan süslemeler (çerçevenin içinde): sol üstte pusula, içeriğin en altında
-// solda sakura, sağda Fuji, çam ve torii. Boyutlar kenar boşluğuna göre.
+// Yan boşluklarda: solda yelkenli, sağda mühür.
+.JfArt--boat { left: ~"calc(@{jf-gutter} / 2 - 35px)"; top: 50%; width: 70px; opacity: .75; }
+.JfArt--seal { right: ~"calc(@{jf-gutter} / 2 - 22px)"; top: 64%; width: 44px; opacity: .8; }
+
+// Altta sabit: solda sakura, sağda Fuji, çam ve torii. Boyutlar kenar boşluğuna göre.
+.JfArt--sakura { left: 0; bottom: 0; width: ~"min(340px, calc(@{jf-gutter} + 40px))"; }
+.JfArt--fuji { right: ~"min(110px, calc(@{jf-gutter} - 200px))"; bottom: ~"min(250px, 26vh)"; width: ~"min(280px, calc(@{jf-gutter} - 10px))"; filter: saturate(1.35) contrast(1.12); }
+.JfArt--pine { right: 0; bottom: 0; width: ~"min(340px, calc(@{jf-gutter} + 60px))"; }
+
+// Pusula çerçevenin içinde, sayfayla kayar.
 .JfFrame .JfArt { z-index: 0; }
 .JfArt--compass { top: 56px; left: 58px; width: 46px; opacity: .8; }
-.JfArt--sakura { left: 0; bottom: 18px; width: ~"min(340px, calc(50vw - 610px))"; }
-.JfArt--fuji { right: ~"min(110px, calc(50vw - 830px))"; bottom: 250px; width: ~"min(280px, calc(50vw - 640px))"; filter: saturate(1.35) contrast(1.12); }
-.JfArt--pine { right: 0; bottom: 18px; width: ~"min(340px, calc(50vw - 590px))"; }
 
-@media (max-width: 1699px) {
-  .JfArt--compass { display: none; }
-  .JfArt--fuji { right: 20px; bottom: 190px; }
+@media (max-height: 820px) {
+  .JfArt--boat { top: 46%; }
+  .JfArt--seal, .JfCloud--3, .JfWave--6 { display: none; }
 }
 
-@media (max-width: 1599px) {
-  .JfArt--sakura, .JfArt--pine, .JfArt--fuji { display: none; }
-  .JfArt--map { opacity: .26; }
+// Yan boşluk daraldıkça önce küçük süslemeler, sonra alttaki büyük resimler gizlenir.
+@media (max-width: 1769px) {
+  .JfArt--boat, .JfArt--seal, .JfCloud { display: none; }
+}
+
+@media (max-width: 1699px) {
+  .JfArt--compass, .JfArt--fuji, .JfArt--sakura, .JfArt--pine { display: none; }
 }
 
 // Kenar boşluğu dar ekranlarda süslemeler metnin arkasına düşer: gizle.
