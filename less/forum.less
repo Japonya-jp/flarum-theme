@@ -173,7 +173,7 @@ a { color: @jf-red; }
 .Hero.JfHero {
   position: relative;
   z-index: 1;
-  padding: 58px 0 0;
+  padding: 30px 0 0;
   margin: 0;
   background: none;
   color: @jf-ink;
@@ -194,14 +194,14 @@ a { color: @jf-red; }
   column-gap: 60px;
   gap: 40px;
   align-items: end;
-  padding: 0 20px 34px;
+  padding: 0 20px 26px;
 }
 
 .JfHero-kicker {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0 0 20px;
+  margin: 0 0 14px;
   font: 700 11.5px/1 @jf-sans;
   letter-spacing: .22em;
   text-transform: uppercase;
@@ -213,7 +213,7 @@ a { color: @jf-red; }
 
 .Hero.JfHero .JfHero-title {
   margin: 0;
-  font: 700 clamp(40px, 4.1vw, 66px)/1.04 @jf-serif;
+  font: 700 clamp(38px, 3.5vw, 58px)/1.04 @jf-serif;
   letter-spacing: -.03em;
   color: @jf-ink;
 }
@@ -222,11 +222,11 @@ a { color: @jf-red; }
   .JfHero-title { white-space: nowrap; }
 }
 
-.JfHero-rule { display: block; width: 52px; height: 3px; margin: 22px 0 18px 2px; background: @jf-red; }
+.JfHero-rule { display: block; width: 52px; height: 3px; margin: 16px 0 14px 2px; background: @jf-red; }
 
 .JfHero-lead {
   margin: 0;
-  font: 400 21px/1.45 @jf-serif;
+  font: 400 20px/1.45 @jf-serif;
   color: #56606a;
 }
 
@@ -305,7 +305,7 @@ a { color: @jf-red; }
   display: flex;
   align-items: flex-start;
   gap: 24px;
-  padding: 22px 22px 26px;
+  padding: 16px 22px 18px;
   text-align: left;
   color: @jf-ink !important;
   text-decoration: none !important;
@@ -338,8 +338,8 @@ a { color: @jf-red; }
   position: relative;
   z-index: 1;
   max-width: 1190px;
-  margin-top: 30px;
-  padding-top: 46px;
+  margin-top: 20px;
+  padding-top: 38px;
 
   &::before {
     content: '';
@@ -635,8 +635,20 @@ a { color: @jf-red; }
 .JfWave--4 { right: 250px; top: 300px; width: 150px; height: 75px; opacity: .6; }
 
 .JfArt { position: absolute; display: block; height: auto; }
-.JfArt--sakura { left: -30px; bottom: 40px; width: 340px; transform: scaleX(-1); transform-origin: center; }
-.JfArt--fuji { right: 110px; bottom: 300px; width: 300px; opacity: .9; }
+.JfArt--sakura { left: 0; bottom: 40px; width: 340px; }
+.JfArt--fuji { right: 110px; bottom: 300px; width: 300px; filter: saturate(1.35) contrast(1.12); }
+
+// Başlıkla arama kutusu arasındaki boşlukta soluk harita (japonya.jp kapağındaki gibi); kenarları söner.
+.JfArt--map {
+  top: 6px;
+  left: 41%;
+  width: 470px;
+  opacity: .5;
+  -webkit-mask-image: radial-gradient(ellipse 62% 62% at 55% 48%, #000 55%, transparent 82%);
+  mask-image: radial-gradient(ellipse 62% 62% at 55% 48%, #000 55%, transparent 82%);
+}
+.JfArt--compass { top: 34px; left: ~"calc(41% - 12px)"; width: 48px; opacity: .8; }
+.JfArt--boat { top: 150px; left: ~"calc(41% + 70px)"; width: 58px; opacity: .65; }
 .JfArt--pine { right: 0; bottom: 20px; width: 360px; }
 
 @media (max-width: 1500px) {
@@ -647,6 +659,14 @@ a { color: @jf-red; }
 
 @media (max-width: 1320px) {
   .JfDecor .JfArt, .JfDecor .JfWave { display: none; }
+}
+
+@media (max-width: 1499px) {
+  .JfArt--map { width: 400px; opacity: .45; }
+}
+
+@media (max-width: 1320px) {
+  .JfDecor .JfArt--map { display: none; }
 }
 
 // Dar ekranda kenar çizgileri metnin üstüne düşer.

@@ -7,16 +7,17 @@ suluboya sakura, Fuji ve çam süslemeleri.
 ## Neler değişir
 
 - **Üst menü:** Tartışmalar, Etiketler, Sıralamalar (fof/gamification), Takip Ediliyor
-  (giriş yapmış üyeler, flarum/subscriptions) ve Ana site ↗. Arama ikona dönüşür,
-  tıklayınca açılır.
+  (giriş yapmış üyeler, flarum/subscriptions). Ana siteye dönüş üstteki yeşil barda.
+  Arama ikona dönüşür, tıklayınca açılır; oturum menüsünde yalnız avatar.
 - **Ana sayfa kahramanı:** "交流 · Japonya.jp Forum", "Japonya, konuştukça yakın",
   sağda arama kutusu ve "Bir Tartışma Başlat"; altında üç yol kartı
   (Sorunu sor → Soru-Cevap, Rotanı paylaş → Gezi Planlama, Deneyimini anlat → yeni tartışma).
 - **Kenar menüsü:** "Forumu keşfet" ve "Konular" başlıkları, etiketler renkli noktayla.
 - **Liste:** "Son tartışmalar · 07 tartışma" başlığı, 01, 02… numaralı satırlar, küçük avatar,
   yanıt sayısı, sağda etiket ve ok.
-- **Süslemeler:** ana sayfada ince kırmızı çerçeve, seigaiha dalgaları, sol altta sakura,
-  sağ altta Fuji, çam ve torii (1320 px altında gizlenir).
+- **Süslemeler:** ana sayfada ince kırmızı çerçeve, başlıkla arama kutusu arasında soluk
+  Japonya haritası (japonya.jp kapağındaki suluboya harita, yalnız görsel), pusula ve kayık,
+  seigaiha dalgaları, sol altta sakura, sağ altta Fuji, çam ve torii (1320 px altında gizlenir).
 - **Diğer sayfalar:** tartışma sayfası serif başlık ve okunaklı gövde, etiket sayfası kâğıt
   zemin ve etiket renginde şerit, Etiketler sayfası kartpostal kartlar.
 - Paneldeki ana renk ne olursa olsun forum japonya.jp paletini (kırmızı #c1272d, kâğıt #f7f6f0) kullanır.

@@ -29,7 +29,7 @@ function discussionCount(page) {
 }
 
 app.initializers.add('japonya-theme', () => {
-  // Üst menü: Tartışmalar, Etiketler, Sıralamalar, Takip Ediliyor, Ana site.
+  // Üst menü: Tartışmalar, Etiketler, Sıralamalar, Takip Ediliyor (ana siteye dönüş üstteki yeşil barda).
   extend(HeaderPrimary.prototype, 'items', function (items) {
     items.add('jfDiscussions', <LinkButton className="Button Button--link JfNav" href={app.route('index')}>{t('nav.discussions')}</LinkButton>, 50);
     if (app.routes.tags) {
@@ -41,14 +41,6 @@ app.initializers.add('japonya-theme', () => {
     if (app.routes.following && app.session.user) {
       items.add('jfFollowing', <LinkButton className="Button Button--link JfNav" href={app.route('following')}>{t('nav.following')}</LinkButton>, 20);
     }
-    items.add(
-      'jfMainSite',
-      <a className="Button Button--link JfNav JfNav--out" href={app.forum.attribute('japonyaMainSiteUrl') || 'https://japonya.jp'}>
-        {t('nav.main_site')}
-        <span aria-hidden="true"> ↗</span>
-      </a>,
-      10
-    );
   });
 
   // Ana sayfa kahramanı: başlık, arama, "Bir Tartışma Başlat" ve üç yol kartı.
