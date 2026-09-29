@@ -7,7 +7,8 @@ import LinkButton from 'flarum/common/components/LinkButton';
 import avatar from 'flarum/common/helpers/avatar';
 
 import JfHero from './components/JfHero';
-import JfDecor from './components/JfDecor';
+import Page from 'flarum/common/components/Page';
+import mountBackground from './background';
 
 const t = (key, params) => app.translator.trans('japonya-theme.forum.' + key, params);
 
@@ -49,12 +50,14 @@ app.initializers.add('japonya-theme', () => {
     return <JfHero page={this} />;
   });
 
-  // Ana sayfa kabı: çerçeve ve süsleme görselleri bu sınıfa bağlı.
+  // Ana sayfa kabı: kahramana özgü stiller bu sınıfa bağlı.
   extend(IndexPage.prototype, 'view', function (vdom) {
     if (!isHome() || !vdom || !vdom.attrs) return;
     vdom.attrs.className = (vdom.attrs.className || '') + ' JfIndex';
-    vdom.children = [...(vdom.children || []), <JfDecor />];
   });
+
+  // Bütün sayfalarda arka plan süslemeleri ve kırmızı çerçeve (bir kez eklenir).
+  extend(Page.prototype, 'oncreate', mountBackground);
 
   // Kenar menüsü başlıkları: "Forumu keşfet" ve etiketlerin üstünde "Konular".
   extend(IndexPage.prototype, 'navItems', function (items) {

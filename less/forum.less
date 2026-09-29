@@ -78,7 +78,7 @@ a { color: @jf-red; }
 
 .App-header {
   background: fade(@jf-paper, 96%);
-  border-bottom: 1px solid fade(@jf-red, 55%);
+  border-bottom: 1px solid @jf-line;
   box-shadow: none;
 
   .affix & , .scrolled & { box-shadow: 0 6px 20px rgba(30, 39, 35, .06); }
@@ -173,7 +173,7 @@ a { color: @jf-red; }
 .Hero.JfHero {
   position: relative;
   z-index: 1;
-  padding: 30px 0 0;
+  padding: 34px 0 0;
   margin: 0;
   background: none;
   color: @jf-ink;
@@ -194,7 +194,7 @@ a { color: @jf-red; }
   column-gap: 60px;
   gap: 40px;
   align-items: end;
-  padding: 0 20px 26px;
+  padding: 0 20px 20px;
 }
 
 .JfHero-kicker {
@@ -213,7 +213,7 @@ a { color: @jf-red; }
 
 .Hero.JfHero .JfHero-title {
   margin: 0;
-  font: 700 clamp(38px, 3.5vw, 58px)/1.04 @jf-serif;
+  font: 700 clamp(34px, 3vw, 50px)/1.05 @jf-serif;
   letter-spacing: -.03em;
   color: @jf-ink;
 }
@@ -222,15 +222,15 @@ a { color: @jf-red; }
   .JfHero-title { white-space: nowrap; }
 }
 
-.JfHero-rule { display: block; width: 52px; height: 3px; margin: 16px 0 14px 2px; background: @jf-red; }
+.JfHero-rule { display: block; width: 46px; height: 3px; margin: 12px 0 10px 2px; background: @jf-red; }
 
 .JfHero-lead {
   margin: 0;
-  font: 400 20px/1.45 @jf-serif;
+  font: 400 18px/1.45 @jf-serif;
   color: #56606a;
 }
 
-.JfHero-side { padding-bottom: 10px; }
+.JfHero-side { padding-bottom: 4px; }
 
 .JfHero-label {
   display: block;
@@ -255,7 +255,7 @@ a { color: @jf-red; }
   }
 
   .FormControl {
-    height: 52px;
+    height: 46px;
     padding-left: 46px;
     font-size: 15px;
     background: #fff;
@@ -269,7 +269,7 @@ a { color: @jf-red; }
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 54px;
+  height: 48px;
   padding: 0 20px;
   font-size: 15px;
   box-shadow: 0 3px 0 @jf-red-dark;
@@ -304,8 +304,8 @@ a { color: @jf-red; }
 .JfStep {
   display: flex;
   align-items: flex-start;
-  gap: 24px;
-  padding: 16px 22px 18px;
+  gap: 20px;
+  padding: 12px 22px 14px;
   text-align: left;
   color: @jf-ink !important;
   text-decoration: none !important;
@@ -320,14 +320,14 @@ a { color: @jf-red; }
   &:hover .JfArrow { transform: translateX(4px); color: @jf-red; }
 }
 
-.JfStep-n { font: 400 34px/1 @jf-serif; color: @jf-red; }
+.JfStep-n { font: 400 28px/1 @jf-serif; color: @jf-red; }
 
 .JfStep-t {
   flex: 1;
   min-width: 0;
-  padding-top: 10px;
+  padding-top: 6px;
 
-  strong { display: block; margin-bottom: 6px; font: 700 20px/1.25 @jf-serif; }
+  strong { display: block; margin-bottom: 4px; font: 700 18px/1.25 @jf-serif; }
   span { display: block; font-size: 13px; line-height: 1.45; color: @jf-mute; }
 }
 
@@ -609,18 +609,10 @@ a { color: @jf-red; }
 .DiscussionList-loadMore { margin-top: 18px; }
 
 // -----------------------------------------------------------------------------
-// Ana sayfa süslemeleri: çerçeve, dalgalar, sakura, Fuji ve çam
+// Arka plan (bütün sayfalar): ekrana sabit süsleme katmanı, içeriğin arkasında
 // -----------------------------------------------------------------------------
 
-.JfDecor { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-
-.JfFrame { position: absolute; background: fade(@jf-red, 80%); }
-.JfFrame--t { display: none; } // Üst çizgiyi başlığın kırmızı alt çizgisi veriyor.
-.JfFrame--b { left: 28px; right: 28px; height: 1px; }
-.JfFrame--b { bottom: 30px; }
-.JfFrame--l, .JfFrame--r { top: 0; bottom: 20px; width: 1px; }
-.JfFrame--l { left: 37px; }
-.JfFrame--r { right: 37px; }
+.JfBg { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
 
 .JfWave {
   position: absolute;
@@ -629,58 +621,81 @@ a { color: @jf-red; }
   background: url('@{jf-assets}/seigaiha.svg') center/contain no-repeat;
   opacity: .8;
 }
-.JfWave--1 { left: 20px; top: 560px; }
-.JfWave--2 { left: 160px; top: 760px; width: 170px; height: 85px; }
-.JfWave--3 { right: 30px; top: 560px; width: 210px; height: 105px; }
-.JfWave--4 { right: 250px; top: 300px; width: 150px; height: 75px; opacity: .6; }
+// Dalga kümeleri yalnız kenar boşluklarında; metnin arkasına düşmesinler.
+.JfWave--1 { left: -70px; top: 46%; }
+.JfWave--2 { left: -20px; top: 70%; width: 170px; height: 85px; }
+.JfWave--3 { right: -60px; top: 58%; width: 210px; height: 105px; }
+.JfWave--4 { right: -40px; top: 12%; width: 150px; height: 75px; opacity: .6; }
 
 .JfArt { position: absolute; display: block; height: auto; }
-.JfArt--sakura { left: 0; bottom: 40px; width: 340px; }
-.JfArt--fuji { right: 110px; bottom: 300px; width: 300px; filter: saturate(1.35) contrast(1.12); }
 
-// Başlıkla arama kutusu arasındaki boşlukta soluk harita (japonya.jp kapağındaki gibi); kenarları söner.
+// Soluk suluboya harita: sağ kenarda, kenarları söner.
 .JfArt--map {
-  top: 6px;
-  left: 41%;
-  width: 470px;
-  opacity: .5;
+  top: 150px;
+  right: ~"max(-60px, calc(50% - 940px))";
+  width: 440px;
+  opacity: .42;
   -webkit-mask-image: radial-gradient(ellipse 62% 62% at 55% 48%, #000 55%, transparent 82%);
   mask-image: radial-gradient(ellipse 62% 62% at 55% 48%, #000 55%, transparent 82%);
 }
-.JfArt--compass { top: 34px; left: ~"calc(41% - 12px)"; width: 48px; opacity: .8; }
-.JfArt--boat { top: 150px; left: ~"calc(41% + 70px)"; width: 58px; opacity: .65; }
-.JfArt--pine { right: 0; bottom: 20px; width: 360px; }
+.JfArt--compass { top: 128px; left: 66px; width: 52px; opacity: .8; }
+.JfArt--boat { top: 64%; right: 70px; width: 64px; opacity: .6; }
+// Sakura, Fuji ve çam kenar boşluğuna sığacak kadar büyür.
+.JfArt--sakura { left: 0; bottom: 20px; width: ~"min(340px, calc(50vw - 610px))"; }
+.JfArt--fuji { right: ~"min(110px, calc(50vw - 830px))"; bottom: 270px; width: ~"min(290px, calc(50vw - 640px))"; filter: saturate(1.35) contrast(1.12); }
+.JfArt--pine { right: 0; bottom: 0; width: ~"min(350px, calc(50vw - 590px))"; }
 
-@media (max-width: 1500px) {
-  .JfArt--sakura { width: 270px; }
-  .JfArt--pine { width: 280px; }
-  .JfArt--fuji { width: 230px; right: 60px; bottom: 250px; }
+@media (max-width: 1699px) {
+  .JfArt--compass, .JfArt--boat { display: none; }
+  .JfArt--fuji { right: 20px; bottom: 200px; }
 }
 
+@media (max-width: 1599px) {
+  .JfArt--sakura, .JfArt--pine, .JfArt--fuji { display: none; }
+  .JfArt--map { width: 340px; right: -90px; opacity: .35; }
+}
+
+// Kenar boşluğu dar ekranlarda süslemeler metnin arkasına düşer: gizle.
 @media (max-width: 1320px) {
-  .JfDecor .JfArt, .JfDecor .JfWave { display: none; }
+  .JfBg { display: none; }
 }
 
-@media (max-width: 1499px) {
-  .JfArt--map { width: 400px; opacity: .45; }
+// -----------------------------------------------------------------------------
+// Kırmızı çerçeve (anasitedeki gibi): köşelerde kesişen ince çizgiler,
+// sol çizgide dikey yazı için aralık
+// -----------------------------------------------------------------------------
+
+.App-content { position: relative; }
+
+.JfFrame { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.JfFrame > span { position: absolute; background: #d2413f; }
+.JfFrame-t, .JfFrame-b { left: 26px; right: 26px; height: 1px; }
+.JfFrame-t { top: 16px; }
+.JfFrame-b { bottom: 16px; }
+.JfFrame-l1, .JfFrame-l2, .JfFrame-r { width: 1px; }
+.JfFrame-l1, .JfFrame-l2 { left: 37px; }
+.JfFrame-l1 { top: 0; height: 190px; }
+.JfFrame-l2 { top: 470px; bottom: 0; }
+.JfFrame-r { right: 37px; top: 0; bottom: 0; }
+
+.JfFrame-v {
+  position: absolute;
+  left: 37px;
+  top: 214px;
+  margin: 0;
+  transform: translateX(-50%);
+  writing-mode: vertical-rl;
+  font: 400 14px/1 @jf-jp;
+  letter-spacing: .3em;
+  color: #6d7075;
+  white-space: nowrap;
 }
 
-@media (max-width: 1320px) {
-  .JfDecor .JfArt--map { display: none; }
-}
+.App-content > #content { position: relative; z-index: 1; }
 
 // Dar ekranda kenar çizgileri metnin üstüne düşer.
 @media (max-width: 1180px) {
   .JfFrame { display: none; }
-}
-
-// Dikey yazı ancak kahramanla sağ çizgi arasında yer varsa.
-@media (max-width: 1500px) {
-  .JfHero-vtext { display: none; }
-}
-
-@media (max-width: 767px) {
-  .JfDecor { display: none; }
 }
 
 // -----------------------------------------------------------------------------
@@ -809,4 +824,9 @@ a { color: @jf-red; }
   .UserPage .DiscussionListItem-info > li.item-tags { position: static !important; transform: none; order: 5; margin-left: 4px; }
   .DiscussionList { padding: 0 2px; }
   .DiscussionListItem-info { flex-wrap: wrap; row-gap: 4px; }
+}
+
+// Sağdaki dikey yazı ancak kahramanla sağ çizgi arasında yer varsa.
+@media (max-width: 1500px) {
+  .JfHero-vtext { display: none; }
 }

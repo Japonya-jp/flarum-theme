@@ -15,9 +15,12 @@ suluboya sakura, Fuji ve çam süslemeleri.
 - **Kenar menüsü:** "Forumu keşfet" ve "Konular" başlıkları, etiketler renkli noktayla.
 - **Liste:** "Son tartışmalar · 07 tartışma" başlığı, 01, 02… numaralı satırlar, küçük avatar,
   yanıt sayısı, sağda etiket ve ok.
-- **Süslemeler:** ana sayfada ince kırmızı çerçeve, başlıkla arama kutusu arasında soluk
-  Japonya haritası (japonya.jp kapağındaki suluboya harita, yalnız görsel), pusula ve kayık,
-  seigaiha dalgaları, sol altta sakura, sağ altta Fuji, çam ve torii (1320 px altında gizlenir).
+- **Çerçeve (bütün sayfalar):** içerik alanının çevresinde anasitedeki gibi ince kırmızı çizgiler;
+  köşelerde kesişir, sol çizgide dikey "日本へ、もっと近く" yazısı (1180 px altında gizli).
+- **Arka plan (bütün sayfalar):** ekrana sabit, içeriğin arkasında süslemeler: soluk suluboya
+  Japonya haritası (japonya.jp kapağındaki, yalnız görsel), pusula, kayık, seigaiha dalgaları,
+  sol altta sakura, sağ altta Fuji, çam ve torii. Kenar boşluğuna göre kademeli: 1700 px üstü
+  hepsi, 1600 px altı yalnız harita ve dalgalar, 1320 px altı hiçbiri.
 - **Diğer sayfalar:** tartışma sayfası serif başlık ve okunaklı gövde, etiket sayfası kâğıt
   zemin ve etiket renginde şerit, Etiketler sayfası kartpostal kartlar.
 - Paneldeki ana renk ne olursa olsun forum japonya.jp paletini (kırmızı #c1272d, kâğıt #f7f6f0) kullanır.
