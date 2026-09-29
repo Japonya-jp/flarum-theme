@@ -134,6 +134,27 @@ a { color: @jf-red; }
   }
 }
 
+// Flarum .container'ı 1100 px'e sabitliyor; üst bar ve ana sayfa geniş ekranda mockup'taki gibi açılsın.
+@media (min-width: 1100px) {
+  .App-header .container,
+  .JfHero .container,
+  .JfSteps.container { width: auto; max-width: 1450px; }
+  .JfIndex .sideNavContainer { width: auto; max-width: 1190px; }
+}
+
+// Üst bar tek satır: kontroller kırılmaz, oturum menüsünde yalnız avatar.
+@media @tablet-up {
+  .Header-controls { display: flex; flex-wrap: nowrap; align-items: center; white-space: nowrap; }
+  .Header-controls > li { flex: none; }
+  .Header-secondary .SessionDropdown .Button-label { display: none; }
+  .Header-secondary .SessionDropdown .Avatar { width: 34px; height: 34px; line-height: 34px; font-size: 15px; }
+  .Header-secondary .item-locale .Button-label { font-size: 13px; }
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+  .JfNav.Button { padding: 8px 10px; font-size: 15px; }
+}
+
 @media (min-width: 768px) and (max-width: 1180px) {
   .JfNav.Button { padding: 8px 9px; font-size: 14.5px; }
   .JfNav--out { display: none; }
@@ -628,6 +649,11 @@ a { color: @jf-red; }
 
 @media (max-width: 1320px) {
   .JfDecor .JfArt, .JfDecor .JfWave { display: none; }
+}
+
+// Dar ekranda kenar çizgileri metnin üstüne düşer.
+@media (max-width: 1180px) {
+  .JfFrame, .JfHero-vtext { display: none; }
 }
 
 @media (max-width: 767px) {
