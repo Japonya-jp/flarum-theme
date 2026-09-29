@@ -412,11 +412,18 @@ a { color: @jf-red; }
   text-transform: uppercase;
   color: #9c4644 !important;
 
-  &--topics { margin-top: 20px; padding-top: 22px; border-top: 1px solid @jf-line; }
+}
+
+// Üst menüde olanlar kenar menüsünde tekrar etmesin (geniş ekran).
+@media @tablet-up {
+  .IndexPage-nav .item-following,
+  .IndexPage-nav .item-rankings,
+  .IndexPage-nav .item-tags,
+  .IndexPage-nav .item-separator { display: none; }
 }
 
 @media @phone {
-  .item-jfExplore, .item-jfTopics { display: none; }
+  .item-jfTopics { display: none; }
 }
 
 // -----------------------------------------------------------------------------
@@ -697,7 +704,7 @@ a { color: @jf-red; }
 .DiscussionHero {
   background: transparent !important;
   color: @jf-ink !important;
-  border-bottom: 1px solid @jf-line;
+  border-bottom: 0;
   padding: 44px 0 28px;
 
   .DiscussionHero-title {
@@ -727,11 +734,20 @@ a { color: @jf-red; }
 
 // Etiket sayfası kahramanı: düz renk bant yerine kâğıt zemin, üstte etiket renginde şerit.
 .Hero.TagHero {
-  background: @jf-card;
+  background: transparent;
   color: @jf-ink;
-  border-bottom: 1px solid @jf-line;
-  box-shadow: inset 0 4px 0 var(--hero-bg, @jf-red);
-  padding: 44px 0 36px;
+  border-bottom: 0;
+  box-shadow: none;
+  padding: 40px 0 26px;
+
+  .containerNarrow::after {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 3px;
+    margin: 16px auto 0;
+    background: var(--hero-bg, @jf-red);
+  }
 
   .Hero-title {
     font: 700 clamp(28px, 3vw, 38px)/1.15 @jf-serif;
@@ -774,7 +790,7 @@ a { color: @jf-red; }
   .Hero-title { font-family: @jf-serif; }
 }
 
-.WelcomeHero { background: @jf-card; color: @jf-ink; border-bottom: 1px solid @jf-line; }
+.WelcomeHero { background: transparent; color: @jf-ink; border-bottom: 0; }
 .WelcomeHero .Hero-title { color: @jf-ink; }
 .WelcomeHero .Hero-subtitle { color: @jf-mute; }
 

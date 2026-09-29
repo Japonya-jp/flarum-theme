@@ -59,12 +59,11 @@ app.initializers.add('japonya-theme', () => {
   // Bütün sayfalarda arka plan süslemeleri ve kırmızı çerçeve (bir kez eklenir).
   extend(Page.prototype, 'oncreate', mountBackground);
 
-  // Kenar menüsü başlıkları: "Forumu keşfet" ve etiketlerin üstünde "Konular".
+  // Kenar menüsü yalnız konu filtresi: "Konular" başlığı, Tüm Tartışmalar ve etiketler.
+  // Sıralamalar, Takip Ediliyor ve Etiketler üst menüde olduğu için geniş ekranda burada
+  // gizlenir (CSS); telefonda üst menü görünmediğinden kenar menüsü tam kalır.
   extend(IndexPage.prototype, 'navItems', function (items) {
-    items.add('jfExplore', <span className="JfNavHead">{t('side.explore')}</span>, 1000);
-    if (items.has('separator')) {
-      items.add('jfTopics', <span className="JfNavHead JfNavHead--topics">{t('side.topics')}</span>, -13);
-    }
+    items.add('jfTopics', <span className="JfNavHead">{t('side.topics')}</span>, 1000);
   });
 
   // Liste başlığı: "Son tartışmalar · 07 tartışma", sıralama sağda.

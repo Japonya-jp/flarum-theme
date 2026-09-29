@@ -12,7 +12,7 @@ suluboya sakura, Fuji ve çam süslemeleri.
 - **Ana sayfa kahramanı (alçak):** "交流 · Japonya.jp Forum", "Japonya, konuştukça yakın",
   sağda arama kutusu ve "Bir Tartışma Başlat"; altında üç yol kartı
   (Sorunu sor → Soru-Cevap, Rotanı paylaş → Gezi Planlama, Deneyimini anlat → yeni tartışma).
-- **Kenar menüsü:** "Forumu keşfet" ve "Konular" başlıkları, etiketler renkli noktayla.
+- **Kenar menüsü:** yalnız konu filtresi: "Konular", Tüm Tartışmalar ve renkli noktalı etiketler. Üst menüdeki bağlantılar geniş ekranda burada tekrar etmez (telefonda kenar menüsü tam kalır).
 - **Liste:** "Son tartışmalar · 07 tartışma" başlığı, 01, 02… numaralı satırlar, küçük avatar,
   yanıt sayısı, sağda etiket ve ok.
 - **Çerçeve (bütün sayfalar):** içerik alanının çevresinde anasitedeki gibi ince kırmızı çizgiler;
