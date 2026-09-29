@@ -1,0 +1,35 @@
+japonya-theme:
+  forum:
+    nav:
+      discussions: Discussions
+      tags: Tags
+      rankings: Rankings
+      following: Following
+      main_site: Main site
+    hero:
+      kicker: JAPONYA.JP FORUM
+      title_1: Japan,
+      title_2: closer with every conversation
+      lead: Ask your questions, share your experiences, discover new routes.
+      search_label: Start searching
+      search_placeholder: Search the forum…
+      vertical: Ask · Share · Discover
+      steps_label: Where to start
+    steps:
+      1:
+        title: Ask a question
+        text: Find answers on visas, transport and daily life.
+      2:
+        title: Share your route
+        text: Let the community weigh in on your city picks.
+      3:
+        title: Tell your story
+        text: Share what you saw and learned in Japan.
+    side:
+      explore: Explore the forum
+      topics: Topics
+    list:
+      title: Latest discussions
+      count: "{count} discussions"
+      replies: "{count, plural, one {# reply} other {# replies}}"
+      note: Explore the discussions for new questions and experiences.

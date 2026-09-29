@@ -1,0 +1,24 @@
+{
+    "name": "japonya/flarum-theme",
+    "description": "Japonya.jp forumu için tema: japonya.jp ile aynı kâğıt, kırmızı çizgi ve serif başlık dili.",
+    "keywords": ["flarum", "theme", "japonya"],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        { "name": "Japonya.jp" }
+    ],
+    "require": {
+        "flarum/core": "^1.8"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Japonya.jp Tema",
+            "category": "theme",
+            "icon": {
+                "name": "fas fa-torii-gate",
+                "color": "#ffffff",
+                "backgroundColor": "#c1272d"
+            }
+        }
+    }
+}

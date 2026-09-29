@@ -1,0 +1,35 @@
+japonya-theme:
+  forum:
+    nav:
+      discussions: Tartışmalar
+      tags: Etiketler
+      rankings: Sıralamalar
+      following: Takip Ediliyor
+      main_site: Ana site
+    hero:
+      kicker: JAPONYA.JP FORUM
+      title_1: Japonya,
+      title_2: konuştukça yakın
+      lead: Sorularını sor, deneyimlerini paylaş, yeni rotalar keşfet.
+      search_label: Aramaya başla
+      search_placeholder: Forumda ara…
+      vertical: Sor · Paylaş · Keşfet
+      steps_label: Nereden başlamalı
+    steps:
+      1:
+        title: Sorunu sor
+        text: Vize, ulaşım ve günlük yaşam için cevap ara.
+      2:
+        title: Rotanı paylaş
+        text: Şehir seçimlerini toplulukla değerlendir.
+      3:
+        title: Deneyimini anlat
+        text: Japonya'da gördüklerini ve öğrendiklerini paylaş.
+    side:
+      explore: Forumu keşfet
+      topics: Konular
+    list:
+      title: Son tartışmalar
+      count: "{count} tartışma"
+      replies: "{count, plural, one {# yanıt} other {# yanıt}}"
+      note: Forumda yeni sorular ve deneyimler için tartışmaları keşfet.
