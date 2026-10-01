@@ -59,6 +59,13 @@ app.initializers.add('japonya-theme', () => {
   // Bütün sayfalarda arka plan süslemeleri ve kırmızı çerçeve (bir kez eklenir).
   extend(Page.prototype, 'oncreate', mountBackground);
 
+  // "Bir Tartışma Başlat" telefonda yalnız simge: ekran okuyucu için adı ekle.
+  extend(IndexPage.prototype, 'sidebarItems', function (items) {
+    if (!items.has('newDiscussion')) return;
+    const button = items.get('newDiscussion');
+    if (button && button.attrs) button.attrs['aria-label'] = app.translator.trans('core.forum.index.start_discussion_button', {}, true);
+  });
+
   // Kenar menüsü yalnız konu filtresi: "Konular" başlığı, Tüm Tartışmalar ve etiketler.
   // Sıralamalar, Takip Ediliyor ve Etiketler üst menüde olduğu için geniş ekranda burada
   // gizlenir (CSS); telefonda üst menü görünmediğinden kenar menüsü tam kalır.

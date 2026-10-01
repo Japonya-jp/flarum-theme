@@ -33,7 +33,7 @@ export default function mountBackground() {
       '<span class="JfWave JfWave--4"></span>',
       '<span class="JfWave JfWave--5"></span>',
       '<span class="JfWave JfWave--6"></span>',
-      `<img class="JfArt JfArt--map" src="${base}map.webp" alt="" decoding="async">`,
+      `<img class="JfArt JfArt--map" src="${base}map.webp" alt="" fetchpriority="high" decoding="async">`,
       cloud('JfCloud JfCloud--1'),
       cloud('JfCloud JfCloud--2'),
       cloud('JfCloud JfCloud--3'),
